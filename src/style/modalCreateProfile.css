@@ -1,0 +1,44 @@
+.container__modal-profile {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.212);
+  border-radius: 7px;
+  margin: 5px;
+  width: 502px;
+  padding: 32px;
+}
+
+.container__createProfile-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3px;
+}
+
+.button--edit {
+  margin-top: 24px;
+}
+
+#profile_title {
+  margin: 0px 0px 15px;
+}
+
+#habit_description {
+  margin: 0px 0px 15px;
+  resize: none;
+}
+
+#habit_category {
+  margin: 0px 0px 15px;
+  padding: 10.5px 18px;
+}
+
+.hidden {
+  display: none;
+}
+
+.title__edit-profile {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

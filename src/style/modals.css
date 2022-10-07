@@ -1,0 +1,74 @@
+.modal-crair-habito-form,
+.modal-edit-habito-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3px;
+}
+
+.row,
+.delete_info-title,
+.delete_info {
+  margin-bottom: 20px;
+}
+
+#habit_title {
+  margin: 0px 0px 15px;
+}
+
+#habit_description {
+  margin: 0px 0px 15px;
+  resize: none;
+}
+
+#habit_category {
+  margin: 0px 0px 15px;
+  padding: 10.5px 18px;
+}
+
+.hidden {
+  display: none;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fa-x {
+  color: gray;
+  size: 20px;
+  cursor: pointer;
+}
+
+.status-row,
+.row {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons-row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px 0px;
+  margin-top: 16px;
+}
+
+.delete-modal {
+  max-width: 520px;
+  width: 55%;
+}
+
+@media screen and (min-width: 990px) {
+  .buttons-row {
+    flex-direction: row;
+  }
+
+  .delete-button {
+    width: 191px;
+  }
+}

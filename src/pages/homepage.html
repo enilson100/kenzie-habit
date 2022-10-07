@@ -1,0 +1,301 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kenzie Habit é um site que te ajuda a controlar suas tarefas" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/components.css" />
+    <link rel="stylesheet" href="../style/homepage.css" />
+    <link rel="icon" href="../assets/icon/favicon.svg" />
+    <link rel="stylesheet" href="../style/modals.css" />
+    <link rel="stylesheet" href="../style/modalCreateProfile.css" />
+    <script defer type="module" src="../js/controllers/Header.controller.js"></script>
+    <script src="https://kit.fontawesome.com/6250bf60ea.js" crossorigin="anonymous"></script>
+    <script defer type="module" src="../js/scripts/homepage.js"></script>
+    <title>Kenzie Habit</title>
+</head>
+
+<body>
+    <header class="header__container">
+        <div class="wrapper">
+
+            <div class="wrapper__header">
+                <div class="wrapper__header--logo">
+                    <h1 class="logo">KenzieHabit</h1>
+                </div>
+
+                <div class="wrapper__header--img">
+
+                    <img class="img--header" id="header--button" src="../assets/img/istockphoto-1223671392-612x612.jpg"
+                        alt="profile-img">
+                    
+
+                    <div class="container-seta hidden">
+                        <div style="display: block;" id="seta"></div>
+                    </div>
+
+                    <div id="wrapper__header--pop-up" class="hidden">
+                        <div class="wrapper__edit">
+                            <button id="edit-perfil"> <i class="fa-solid fa-user "></i>
+                                <p class="edit-text text-2 text-2--500">Editar perfil</p>
+                            </button>
+                        </div>
+                        <div class="wrapper__logout">
+                            <button id="logout"> <i class="fa-solid fa-arrow-left"></i>
+                                <p class="logout-text text-2 text-2--500">Sair do app</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="wrapper__sub-header">
+                <div class="container__sub-header">
+                    <div class="wrapper__sub-header--img">
+
+                    </div>
+                    <div class="wrapper__sub-header--username">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main__container">
+        <section class="section__container">
+            <div class="section__filter--infos">
+                <div class="section__filter-title title-4">
+                    <span>Tarefas</span>
+                </div>
+
+                <ul class="section__filter--options">
+                    <li class="text-2--500" id="allPosts">Todos</li>
+                    <li class="text-2--500" id="postsConcluded">Concluídos</li>
+                    <li><button class="section__filter--button">Criar</button></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="habits-container">
+            <table class="habits__table">
+                <thead class="habits__table-head">
+                    <tr class="data-row">
+                        <th class="text-2--500 head-data">
+                            Status
+                        </th>
+                        <th class="text-2--500 head-data">
+                            Título
+                        </th>
+                        <th class="text-2--500 head-data">
+                            Descrição
+                        </th>
+                        <th class="text-2--500 head-data">
+                            Categoria
+                        </th>
+                        <th class="text-2--500 head-data">
+                            Editar
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody class="habits__table-body">
+                </tbody>
+            </table>
+        </section>
+        <section class="load-more__container">
+            <button class="button load-more">Carregar mais</button>
+        </section>
+    </main>
+
+    <section class="blocker hidden" id="modal-criar">
+        <div class="modal">
+            <div class="container_crair-habito-form">
+                <form class="modal-crair-habito-form" action="" type="submit">
+                    <div class="row">
+                        <h2 class="title-4 criar-habito_title-primary">
+                            Criar hábito
+                        </h2>
+                        <img class="fa-solid fa-x" src="" alt="">
+                    </div>
+
+                    <label class="text-3" for="habit_title">Titulo</label>
+                    <input class="input" type="text" name="habit_title" id="habit_title" placeholder="Digitar título"
+                        required />
+                    <p class="text-3 text-3--error hidden" id="title_error">Campo obrigatório!</p>
+
+                    <label class="text-3" for="habit_description">Descrição</label>
+                    <textarea required class="input" name="habit_description" id="habit_description" rows="3"
+                        placeholder="Digitar descrição"></textarea>
+                    <p class="text-3 text-3--error hidden" id="description_error">Campo obrigatório!</p>
+
+                    <label class="text-3" for="habit_category">Categoria</label>
+                    <section class="select-container">
+                        <button class="select-custom--create" type="button">
+                            <p class="text-2 selector--create">Selecionar categoria</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                
+                        <ul class="option-container--create hidden">
+                        </ul>
+                    </section>
+                    <!-- <label class="text-3" for="habit_category">Categoria</label>
+                    <select class="input" name="habit_category" id="habit_category">
+                        <option value="casa">Casa</option>
+                        <option value="estudos">Estudo</option>
+                        <option value="lazer">Lazer</option>
+                        <option value="trabalho">Trabalho</option>
+                        <option value="saude">Saúde</option>
+                    </select> -->
+
+                    <button class="button button--big button-inserir" type="submit">Inserir</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="blocker container_edit-habit hidden" id="edit-modal">
+        <div class="modal">
+            <div class="container_edit-habito-form">
+                <form class="modal-edit-habito-form" action="" type="submit">
+                    <div class="row">
+                        <h2 class="title-4 edit-habito_title-primary">
+                            Editar hábito
+                        </h2>
+                        <img class="fa-solid fa-x" id="edit-habit" src="" alt="">
+                    </div>
+
+                    <label class="text-3" for="edit_name">Titulo</label>
+                    <input required class="input" type="text" name="habit_title" id="habit_title"
+                        placeholder="Digitar título" />
+
+                    <label class="text-3" for="habit_description">Descrição</label>
+                    <textarea required class="input" name="habit_description" id="habit_description" rows="3"
+                        placeholder="Digitar descrição"></textarea>
+
+                    <label class="text-3" for="habit_category">Categoria</label>
+                    <section class="select-container">
+                        <button class="select-custom" type="button">
+                            <p class="text-2 selector">Selecionar categoria</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                
+                        <ul class="option-container hidden">
+                        </ul>
+                    </section>
+
+                    <div class="status-row">
+                        <h2 class="text-2--500">Status</h2>
+                        <input class="checkbox" type="checkbox" name="habit_status" id="habit_status" />
+                    </div>
+                    <div class="buttons-row">
+                        <button class="button button--big button--big-grey delete-button" type="submit">
+                            Excluir
+                        </button>
+                        <button id="buttonSave" class="button button--big" type="submit">Salvar Alterações</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="blocker container_edit-habit container_delete-habit hidden">
+        <div class="modal delete-modal">
+            <div class="container_edit-habito-form">
+                <form class="modal-edit-habito-form" action="" type="submit">
+                    <div class="row">
+                        <h2 class="title-4 edit-habito_title-primary">Excluir hábito</h2>
+
+                        <img class="fa-solid fa-x" id="exit" src="" alt="" />
+                    </div>
+                    <h4 class="title-4 delete_info-title">Certeza que deseja excluir este hábito?</h4>
+                    <p class="text-2--500 delete_info">Após executar essa ação não será possível desfazer</p>
+                    <div class="buttons-row">
+                        <button class="button--big-grey button button--big button-delete" id="cancelar" type="submit">
+                            Cancelar
+                        </button>
+                        <button class="button button--big button--big-red button_red" type="submit">
+                            Sim, excluir este hábito
+                        </button>
+                    </div>
+            </div>
+            </form>
+        </div>
+        </div>
+    </section>
+
+    <section class="blocker hidden" id="containerProfileModal">
+        <div class="modal">
+            <div class="container__createProfile-form">
+                <form class="modal-crair-habito-form" type="submit">
+                    <span class=" title__edit-profile">
+                        <h2 class="title-4 criar-profile_title-primary">Editar perfil</h2>
+                        <i class="fa-solid fa-x" id="closeButtonEditProfile"></i>
+                    </span>
+                    <label class="text-3">Nome</label>
+                    <input class="input" type="text" name="usr_name" id="inputName"
+                        placeholder="Digite o nome" /></input>
+                    <p class="text-3 text-3--error hidden" id="nameErr">Campo obrigatório!</p>
+
+
+                    <label class="text-3">URL da imagem do perfil</label>
+                    <input class="input" name="usr_image" id="inputImg" placeholder="https://imagem.com.br"></input>
+                    <p class="text-3 text-3--error hidden" id="urlImageErr">Campo obrigatório!</p>
+
+                    <button id="button-save" class="button button--big button--edit" type="submit">Salvar
+                        alterações</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="blocker anonymous hidden">
+        <div class="modal anonymous-modal">
+            <h2 class="title-4">É necessário estar logado para acessar essa funcionalidade</h2>
+            <button class="button button--big" id="anonymousButton">Logar</button>
+        </div>
+    </section>
+
+    <section class="container_pop-up_create-habit  pop-up hidden">
+        <figure>
+            <img class="img_pop-up" src="../assets/img/checkbox.png" alt="check">
+        </figure>
+        <div class="check_info ">
+            <h2 class="title-4 pop-up_title">Sucesso!</h2>
+            <p class="text-2--500">Seu hábito foi criado</p>
+        </div>
+    </section>
+    <section class="container_pop-up_create-user pop-up hidden">
+        <figure>
+            <img class="img_pop-up" src="../assets/img/checkbox.png" alt="check">
+        </figure>
+        <div class="check_info ">
+            <h2 class="title-4 pop-up_title">Sucesso!</h2>
+            <p class="text-2--500">O hábito foi deletado</p>
+        </div>
+    </section>
+    <section class="container_pop-up_edit-habit pop-up hidden">
+        <figure>
+            <img class="img_pop-up" src="../assets/img/checkbox.png" alt="check">
+        </figure>
+        <div class="check_info ">
+            <h2 class="title-4 pop-up_title">Sucesso!</h2>
+            <p class="text-2--500">Seu hábito foi alterado</p>
+        </div>
+    </section>
+    <section class="container_pop-up_edit-profile pop-up hidden">
+        <figure>
+            <img class="img_pop-up" src="../assets/img/checkbox.png" alt="check">
+        </figure>
+        <div class="check_info ">
+            <h2 class="title-4 pop-up_title">Sucesso!</h2>
+            <p class="text-2--500">Seu nome e foto foram alterados</p>
+        </div>
+    </section>
+</body>
+
+</html>

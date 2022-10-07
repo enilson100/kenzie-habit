@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página para acessar o site" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style/reset.css" />
+    <link rel="stylesheet" href="./src/style/components.css" />
+    <link rel="stylesheet" href="./src/style/login.css" />
+    <link rel="icon" href="./src/assets/icon/favicon.svg" />
+    <script
+      src="https://kit.fontawesome.com/6250bf60ea.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer type="module" src="./src/js/scripts/index.js"></script>
+    <title>Login</title>
+  </head>
+
+  <body>
+    <main class="container_main">
+      <section class="container_login">
+        <div class="first-column_content">
+          <div class="first_colunm-info">
+            <h1 class="title-1 first_colunm_title-primary">Kenzie Habit</h1>
+            <h3 class="title-3 first_colunm_description-primary">
+              If you are going to use a <a href="#">passage</a> of Lorem Ipsum
+            </h3>
+            <p class="text-2--500 first_colunm_description-second">
+              you need to be sure there isn't anything
+            </p>
+          </div>
+        </div>
+
+        <div class="segundo-column_content">
+          <div class="segundo_colunm-form">
+            <form type="submit" class="colunm-form" id="loginForm">
+              <h4 class="title-4 login_title">Login</h4>
+
+              <label class="text-4 text_login-usuario">Usuário</label>
+              <input
+                class="input input-email"
+                type="text"
+                name="email"
+                placeholder="E-mail"
+              />
+              <p class="text-3 text-3--error hidden" id="email_error">
+                Campo obrigatório!
+              </p>
+
+              <label class="text-4 text_login-senha">Senha</label>
+              <input
+                class="input input-senha"
+                type="password"
+                name="password"
+                placeholder="Digite a senha"
+              />
+              <p class="text-3 text-3--error hidden" id="senha_error">
+                Campo obrigatório!
+              </p>
+
+              <button
+                type="submit"
+                id="btnLogin"
+                class="button button--big button-login"
+              >
+                Entrar
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
